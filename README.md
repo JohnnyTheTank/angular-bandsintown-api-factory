@@ -1,2 +1,94 @@
-# angular-bandsintown-api-factory
-AngularJS factory for Bandsintown JSON REST API requests
+**angular-bandsintown-api-factory** is an angularjs module with a bandsintown v2 api factory.
+
+Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
+
+## Usage
+1. Install via [bower](http://bower.io/) :
+    1. `bower install --save angular-bandsintown-api-factory`
+2. Add `jtt_bandsintown` to your application's module dependencies.
+3. Include dependencies in your HTML.
+    1. When using bower:
+
+    ```html
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-bandsintown-api-factory/src/angular-bandsintown-api-factory.js"></script>
+    ```
+
+4. Use the factory `bandsintownFactory`
+
+
+### factory methods
+
+#### getArtist
+Get all parameters [here](http://bandsintown.com/api/requests#artists-get)
+```js
+// all parameters: http://bandsintown.com/api/requests#artists-get
+bandsintownFactory.getArtist({
+    artist:"<ARTIST_NAME>", // ? and / characters must be double escaped. Artists such as "AC/DC" will end up as "AC%252FDC"
+    artist_id:"<ARTIST_ID>", // (optional) fallback: mbid_<id> (MusicBrainz ID), fbid_<id> (Facebook Page ID)
+    app_id:"<YOUR_APP_ID>", //The application ID can be anything, but should be a word that describes your application or company.
+}).success(function (_data) {
+    //on success
+}).error(function (_data) {
+    //on error
+});
+```
+
+#### getEvents
+Get all parameters [here](http://bandsintown.com/api/requests#artists-events)
+```js
+// all parameters: http://bandsintown.com/api/requests#artists-events
+bandsintownFactory.getEventsFromArtist({
+    artist:"<ARTIST_NAME>", // ? and / characters must be double escaped. Artists such as "AC/DC" will end up as "AC%252FDC"
+    artist_id:"<ARTIST_ID>", // (optional) fallback: mbid_<id> (MusicBrainz ID), fbid_<id> (Facebook Page ID)
+    date:"<DATE>", // (optional) (default: upcoming) yyyy-mm-dd || yyyy-mm-dd,yyyy-mm-dd (inclusive range) || upcoming || all
+    app_id:"<YOUR_APP_ID>", //The application ID can be anything, but should be a word that describes your application or company.
+}).success(function (_data) {
+    //on success
+}).error(function (_data) {
+    //on error
+});
+```
+
+Get all parameters [here](http://bandsintown.com/api/requests#artists-event-search)
+```js
+// all parameters: http://bandsintown.com/api/requests#artists-event-search
+bandsintownFactory.getEventsFromArtistByLocation({
+    artist:"<ARTIST_NAME>", // ? and / characters must be double escaped. Artists such as "AC/DC" will end up as "AC%252FDC"
+    artist_id:"<ARTIST_ID>", // (optional) fallback: mbid_<id> (MusicBrainz ID), fbid_<id> (Facebook Page ID)
+    date:"<DATE>", // (optional) (default: upcoming) yyyy-mm-dd || yyyy-mm-dd,yyyy-mm-dd (inclusive range) || upcoming || all
+    location:"<LOCATION>", // city,state (US or CA) || city,country || lat,lon || ip address
+    radius:"<RADIUS">, // (optional) (default: 25) in miles. valid values: 0-150
+    app_id:"<YOUR_APP_ID>", //The application ID can be anything, but should be a word that describes your application or company.
+}).success(function (_data) {
+    //on success
+}).error(function (_data) {
+    //on error
+});
+```
+
+Get all parameters [here](http://bandsintown.com/api/requests#artists-recommended-events)
+```js
+// all parameters: http://bandsintown.com/api/requests#artists-recommended-events
+bandsintownFactory.getRecommendedEventsFromArtistByLocation({
+    artist:"<ARTIST_NAME>", // ? and / characters must be double escaped. Artists such as "AC/DC" will end up as "AC%252FDC"
+    artist_id:"<ARTIST_ID>", // (optional) fallback: mbid_<id> (MusicBrainz ID), fbid_<id> (Facebook Page ID)
+    date:"<DATE>", // (optional) (default: upcoming) yyyy-mm-dd || yyyy-mm-dd,yyyy-mm-dd (inclusive range) || upcoming || all
+    location:"<LOCATION>", // city,state (US or CA) || city,country || lat,lon || ip address
+    radius:"<RADIUS">, // (optional) (default: 25) in miles. valid values: 0-150
+    only_recs:"<ONLY_RECS>", // (optional) (default: false) if true, the response will only include matching events for artists similar to the specified artist. if false, the response may also include matching events for the specified artist.
+    app_id:"<YOUR_APP_ID>", //The application ID can be anything, but should be a word that describes your application or company.
+}).success(function (_data) {
+    //on success
+}).error(function (_data) {
+    //on error
+});
+```
+
+## Bandsintown V2 JSON API
+Docs: http://bandsintown.com/api/requests
+
+
+## License
+
+MIT
