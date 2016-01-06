@@ -27,9 +27,9 @@ bandsintownFactory.getArtist({
     artist:"<ARTIST_NAME>", // ? and / characters must be double escaped. Artists such as "AC/DC" will end up as "AC%252FDC"
     artist_id:"<ARTIST_ID>", // (optional) fallback: mbid_<id> (MusicBrainz ID), fbid_<id> (Facebook Page ID)
     app_id:"<YOUR_APP_ID>", //The application ID can be anything, but should be a word that describes your application or company.
-}).success(function (_data) {
+}).then(function (_data) {
     //on success
-}).error(function (_data) {
+}).catch(function (_data) {
     //on error
 });
 ```
@@ -43,9 +43,9 @@ bandsintownFactory.getEventsFromArtist({
     artist_id:"<ARTIST_ID>", // (optional) fallback: mbid_<id> (MusicBrainz ID), fbid_<id> (Facebook Page ID)
     date:"<DATE>", // (optional) (default: upcoming) yyyy-mm-dd || yyyy-mm-dd,yyyy-mm-dd (inclusive range) || upcoming || all
     app_id:"<YOUR_APP_ID>", //The application ID can be anything, but should be a word that describes your application or company.
-}).success(function (_data) {
+}).then(function (_data) {
     //on success
-}).error(function (_data) {
+}).catch(function (_data) {
     //on error
 });
 ```
@@ -60,9 +60,9 @@ bandsintownFactory.getEventsFromArtistByLocation({
     location:"<LOCATION>", // city,state (US or CA) || city,country || lat,lon || ip address
     radius:"<RADIUS">, // (optional) (default: 25) in miles. valid values: 0-150
     app_id:"<YOUR_APP_ID>", //The application ID can be anything, but should be a word that describes your application or company.
-}).success(function (_data) {
+}).then(function (_data) {
     //on success
-}).error(function (_data) {
+}).catch(function (_data) {
     //on error
 });
 ```
@@ -78,9 +78,9 @@ bandsintownFactory.getRecommendedEventsFromArtistByLocation({
     radius:"<RADIUS">, // (optional) (default: 25) in miles. valid values: 0-150
     only_recs:"<ONLY_RECS>", // (optional) (default: false) if true, the response will only include matching events for artists similar to the specified artist. if false, the response may also include matching events for the specified artist.
     app_id:"<YOUR_APP_ID>", //The application ID can be anything, but should be a word that describes your application or company.
-}).success(function (_data) {
+}).then(function (_data) {
     //on success
-}).error(function (_data) {
+}).catch(function (_data) {
     //on error
 });
 ```

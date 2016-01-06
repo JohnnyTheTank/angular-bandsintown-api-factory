@@ -6,14 +6,14 @@ app.controller('controller', ['$scope', 'bandsintownFactory', function($scope, b
     bandsintownFactory.getArtist({
         artist:"Prinz Pi",
         app_id:_app_id,
-    }).success(function(_data){
+    }).then(function(_data){
         console.log("artist", _data);
     });
 
     bandsintownFactory.getEventsFromArtist({
         artist:"Prinz Pi",
         app_id:_app_id,
-    }).success(function(_data){
+    }).then(function(_data){
         console.log("events from artist", _data);
     });
 
@@ -22,7 +22,7 @@ app.controller('controller', ['$scope', 'bandsintownFactory', function($scope, b
         location:'munich, germany',
         date:'all',
         app_id:_app_id,
-    }).success(function(_data){
+    }).then(function(_data){
         console.log("events from artist by location", _data);
     });
 
@@ -32,7 +32,7 @@ app.controller('controller', ['$scope', 'bandsintownFactory', function($scope, b
         date:'all',
         only_recs: true,
         app_id:_app_id,
-    }).success(function(_data){
+    }).then(function(_data){
         console.log("recommended events from artist by location", _data);
     });
 
