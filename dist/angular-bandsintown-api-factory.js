@@ -1,12 +1,11 @@
-
-/*! angular-bandsintown-api-factory v0.5.0 (06-01-2016) by Jonathan Hornung */
-"use strict";
-
 /**
- @author Jonathan Hornung (https://github.com/JohnnyTheTank)
- @url https://github.com/JohnnyTheTank/angular-bandsintown-api-factory
- @licence MIT
- */
+    @name: angular-bandsintown-api-factory 
+    @version: 0.5.1 (06-01-2016) 
+    @author: Jonathan Hornung 
+    @url: https://github.com/JohnnyTheTank/angular-bandsintown-api-factory#readme 
+    @license: MIT
+*/
+"use strict";
 
 angular.module("jtt_bandsintown", [])
     .factory('bandsintownFactory', ['$http', 'bandsintownSearchDataService', function ($http, bandsintownSearchDataService) {

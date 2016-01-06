@@ -1,11 +1,5 @@
 "use strict";
 
-/**
- @author Jonathan Hornung (https://github.com/JohnnyTheTank)
- @url https://github.com/JohnnyTheTank/angular-bandsintown-api-factory
- @licence MIT
- */
-
 angular.module("jtt_bandsintown", [])
     .factory('bandsintownFactory', ['$http', 'bandsintownSearchDataService', function ($http, bandsintownSearchDataService) {
 
