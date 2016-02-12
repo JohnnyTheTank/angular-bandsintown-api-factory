@@ -1,5 +1,8 @@
 **angular-bandsintown-api-factory** is an angularjs module with a bandsintown v2 api factory.
 
+[![npm version](https://badge.fury.io/js/angular-bandsintown-api-factory.png)](https://badge.fury.io/js/angular-bandsintown-api-factory)
+[![Bower version](https://badge.fury.io/bo/angular-bandsintown-api-factory.png)](https://badge.fury.io/bo/angular-bandsintown-api-factory)
+
 Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
 
 ## Usage
