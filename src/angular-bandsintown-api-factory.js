@@ -63,11 +63,10 @@ angular.module("jtt_bandsintown", [])
         this.fillDataInObjectByList = function(_object, _params, _list) {
 
             angular.forEach(_list, function (value, key) {
-                if(typeof _params[value] !== "undefined") {
+                if(angular.isDefined(_params[value])) {
                     _object.object[value] = _params[value];
                 }
             });
-
             return _object;
         };
 
@@ -83,7 +82,7 @@ angular.module("jtt_bandsintown", [])
                 url: "",
             };
 
-            if (typeof _params.limit !== "undefined") {
+            if (angular.isDefined(_params.limit)) {
                 bandsintownSearchData.object.limit = _params.limit;
             }
 
