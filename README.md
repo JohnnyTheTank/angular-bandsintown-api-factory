@@ -1,7 +1,7 @@
 **angular-bandsintown-api-factory** is an angularjs module with a bandsintown v2 api factory.
 
-[![npm version](https://badge.fury.io/js/angular-bandsintown-api-factory.png)](https://badge.fury.io/js/angular-bandsintown-api-factory)
-[![Bower version](https://badge.fury.io/bo/angular-bandsintown-api-factory.png)](https://badge.fury.io/bo/angular-bandsintown-api-factory)
+[![npm version](https://badge.fury.io/js/angular-bandsintown-api-factory.svg)](https://badge.fury.io/js/angular-bandsintown-api-factory)
+[![Bower version](https://badge.fury.io/bo/angular-bandsintown-api-factory.svg)](https://badge.fury.io/bo/angular-bandsintown-api-factory)
 
 Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
 
@@ -10,8 +10,8 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
     1. `bower install --save angular-bandsintown-api-factory`
     2. `npm install --save angular-bandsintown-api-factory`
     3. download [angular-bandsintown-api-factory.zip](https://github.com/JohnnyTheTank/angular-bandsintown-api-factory/zipball/master)
-2. Add `jtt_bandsintown` to your application's module dependencies.
-3. Include dependencies in your HTML.
+
+2. Include dependencies in your HTML.
     1. When using bower:
     ```html
     <script src="bower_components/angular-bandsintown-api-factory/dist/angular-bandsintown-api-factory.min.js"></script>
@@ -24,8 +24,8 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
     ```html
     <script src="angular-bandsintown-api-factory.min.js"></script>
     ```
+3. Add **`jtt_bandsintown`** to your application's module dependencies.
 4. Use the factory `bandsintownFactory`
-
 
 ### factory methods
 
